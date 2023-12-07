@@ -1,6 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
-const Usuario = require('../models/usuario');
+const Usuario = require('../models/Usuario');
 const { generarJsonWebToken } = require('../helpers/jwt');
 
 
@@ -97,17 +97,15 @@ const loginUsuario = async (req,res = express.response)=>{
 }
     
 
-const revalidarToken = (req,res = express.response)=>{
+const revalidarToken = async (req,res = express.response)=>{
 
   const { uid , name } = req;
 
-    const token =  generarJsonWebToken( uid , name )
+    const token =  await generarJsonWebToken( uid , name )
 
     res.json({
         ok:true,
-        msg:'renew',
-        uid,
-        name,
+        uid,name,
         token
     })
 }
