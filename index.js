@@ -40,5 +40,5 @@ app.use('/api/events', require('./rutes/events'));
 
 app.listen(process.env.PORT,() => {
     console.log(`servidor corriendo en puerto ${process.env.PORT}`);
-}); 
+});  
 
