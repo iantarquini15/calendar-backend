@@ -42,6 +42,4 @@ app.listen(process.env.PORT,() => {
     console.log(`servidor corriendo en puerto ${process.env.PORT}`);
 });  
 
-if(process.env.PORT !== 'production') {
-    require('dotenv').config()
-}
+
