@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 
 const { generarJsonWebToken } = require('../helpers/jwt');
-const Usuario = require('../models/usuario');
+const Usuario = require('../models/Usuario');
 
 
 
